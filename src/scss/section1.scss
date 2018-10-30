@@ -1,0 +1,118 @@
+.sec1{
+    .row{
+        .img-col{
+            overflow: hidden;
+            img{
+                width: 100%;
+            }
+        }
+        .col-lg-6{
+            h4{
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+                font-size: 2.5rem;
+                margin-bottom: 35px;
+            }
+            .row{
+                margin-top: 40px;
+                .col-lg-6{
+                    text-align: center;
+                    h5{
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                        font-size: 1.5rem;
+                        margin-top: 20px;
+                    }
+                    .circle{
+                        width: 90px;
+                        height: 90px;
+                        position: relative;
+                        border: 2px solid transparent;
+                        border-radius: 50%;
+                        margin: 0 auto;
+                        background: linear-gradient(to right, rgba(106,130,251,1), rgba(252,92,124,1));
+                        div{
+                            background-color: white;
+                            width: 86px;
+                            height: 86px;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+                    i{
+                        font-size: 2.8rem;
+                        color: $primary;
+                        position: absolute;
+                        top: 17%;
+                        transform: translate(-50%);
+                    }
+                    .blue-line{
+                        color: $secondary;
+                    }
+                }
+                .animate-col:hover{
+                    .circle{
+                        animation: rot 1s linear infinite; 
+                    }                     
+                }
+                @keyframes rot {
+                    0%
+                   {
+                     transform:rotate(0deg)
+                   }
+                    25%
+                   {
+                     transform:rotate(90deg)
+                   }
+                   50%
+                   {
+                     transform:rotate(180deg)
+                   }
+                    75%
+                   {
+                     transform:rotate(270deg)
+                   }
+                   100% {
+                     transform:rotate(360deg)
+                   }
+                 }
+            }
+        }
+    }
+}
+
+/* Medium devices */
+@media all and (max-width: 991px) {
+    .sec1{
+        .row{
+            .img-col{
+                img{
+                    display: none;
+                }
+            }
+            .col-lg-6{
+                text-align: center;
+            }
+        }
+    }
+} 
+/* Small devices */
+@media all and (max-width: 767px) {
+    .sec1{
+        .row{
+            .col-lg-6{
+                p{
+                    margin-bottom: 40px;
+                }
+                .row{
+                    margin-top: 0;
+                    .col-lg-6{
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+        }
+    }
+} 

@@ -1,0 +1,137 @@
+.sec6{
+    .col-lg-3{
+        img{
+            width: 100%;
+        }
+        .all-content{
+            position: relative;
+            .overlay{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: linear-gradient(135deg, rgba(47,137,252,0.7) 0%, rgba(252,92,124,0.7));
+                color: $success;
+                padding-left: 25px;
+                opacity: 0;
+                transition: all 0.3s;
+                .col-head{
+                    position: absolute;
+                    top: 20px;
+                    transition: all 0.2s;
+                    hr{
+                        width: 45px;
+                        height: 3px;
+                        margin-top: 5px;
+                        margin-bottom: 5px;
+                        background-color: $success;
+                    }
+                    h4{
+                        font-size: 1.8rem;
+                        transition: all 0.3s;
+                    }
+                }
+                p{
+                    color: $success;
+                    position: absolute;
+                    top: 60px;
+                    transition: top 0.3s;
+                }
+                ul{
+                    list-style-type: none;
+                    padding: 0 25px; 
+                    bottom: 0;
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+                    margin-bottom: 0;
+                    li{
+                        margin-right: 8px;
+                        margin-bottom: 8px;
+                        display: inline-block;
+                        position: relative;
+                    }
+                }
+                .circle-icon{             
+                    border-width: 1px;
+                    width: 40px;
+                    height: 40px;
+                }
+                .circle-icon:hover{
+                    color: $primary;
+                }
+                .Facebook, .twitter, .google, .linked{
+                    bottom: -20px;
+                }
+                .Facebook{
+                    transition: bottom 0.2s, color 0.4s ease-in-out, background-color 0.4s;
+                }
+                .twitter{
+                    transition: bottom 0.3s, color 0.4s ease-in-out, background-color 0.4s;
+                }
+                .google{              
+                    transition: bottom 0.4s, color 0.4s ease-in-out, background-color 0.4s;
+                }
+                .linked{
+                    transition: bottom 0.5s, color 0.4s ease-in-out, background-color 0.4s;
+                }
+            }
+        }
+    }
+    .col-lg-3:hover{
+        .overlay{
+            opacity: 1;
+            .col-head{
+                top: 30px;
+            }
+            p{
+                top: 75px;
+            }
+            .Facebook, .twitter, .google, .linked{
+                bottom: 30px;
+            }
+        }
+    }
+}
+
+/* Large devices */
+@media all and (max-width: 1200px) {
+    .sec6{
+        .col-lg-3{
+            .all-content{
+                .overlay{
+                    .col-head{
+                        h4{
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+        }
+        .col-lg-3:hover{
+            .overlay{
+                p{
+                    top: 66px;
+                }
+            }
+        }
+    }
+}
+/* Medium devices */
+@media all and (max-width: 991px) {
+    .sec6{
+        .col-lg-3{
+            margin-bottom: 30px;
+        }
+    }
+}  
+/* Extra Small devices */
+@media all and (max-width: 575px) {
+    .sec6{
+        .col-lg-3{
+            min-width: 80%;
+            margin: 0 auto 30px auto;
+        }
+    }
+}  

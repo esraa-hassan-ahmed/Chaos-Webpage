@@ -1,0 +1,124 @@
+.sec9{
+    .center-head{
+        margin-bottom: 120px;
+    }
+    .first-row{
+        margin-bottom: 55px;
+        text-align: center;
+        h3{
+            font-size: 1.5rem;
+            span:after{
+                width: 55px;
+                height: 3px;
+                top: -13px;
+            }
+        }
+        p{
+            margin-bottom: 3px;
+            transition: all 0.5s;
+        }
+        .email-col{
+            p:hover{
+                color: $primary;
+                cursor: pointer;
+            }
+        }
+    }
+    .row{
+        .pad-col{
+            padding: 0;
+        }
+        .shadow-col{
+            box-shadow: 5px 0px 21px 2px rgba(0,0,0,0.18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            form{
+                padding: 0 20px;
+            }
+            .form-control{
+                height: 50px;
+                padding: 20px 30px;
+                font-size: 1rem;
+                font-weight: 300;
+                color: $info;
+                border-radius: 100px;
+                border-top: 1px solid $secondary;
+                border-bottom: 1px solid $primary;
+                border-left: 1px solid $secondary;
+                border-right: 1px solid $primary;
+                margin-bottom: 40px;
+            }
+            .name{
+                padding-right: 15px;
+            }
+            .email{
+                padding-left: 15px;
+            }
+            .message{
+                height: 200px;
+                border-radius: 20px;
+                padding-top: 0;
+                padding-bottom: 135px;
+            }
+            button{
+                float: right;
+                padding: 15px 35px;
+                text-transform: uppercase;
+                border-radius: 100px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                font-size: 0.8rem;
+                background-color: $primary;             
+                border: 0;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                transition: all 0.3s ease-in-out;
+            }
+            button:before{
+                position: absolute;
+                content: '';
+                background-color: $secondary;
+                transition: all 0.3s ease-in-out;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                transform: scaleX(0);
+                transform-origin: 0 50%;
+                z-index: -1;
+                border-radius: 100px;
+            }
+            button:hover::before{
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+/* Medium devices */
+@media all and (max-width: 991px) {
+    .sec9{
+        .row{
+            .shadow-col{
+                .email{
+                    padding-left: 0;
+                }
+                form{
+                    padding: 50px 20px;
+                }
+            }
+        }
+    }
+}
+/* Small devices */
+@media all and (max-width: 767px) {
+    .sec9{
+        .first-row{
+            .col-lg-4{
+                margin-bottom: 50px;
+            }
+        }
+    }
+}   

@@ -1,0 +1,112 @@
+section{
+    padding: 160px 0 140px 0;
+}
+.container-fluid{
+    width: 90%;
+}
+.center-head{
+    text-align: center;
+    margin-bottom: 100px;
+}
+h4, h5{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; 
+} 
+h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    span{
+        position: relative;
+    }
+    span:after{
+        position: absolute;
+        content: '';
+        top: -20px;
+        left: 0;
+        width: 80px;
+        height: 5px;
+        background:linear-gradient(to right, rgba(106,130,251,1) 0%, rgba(252,92,124,1) 100%);
+    }
+}
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: $light;
+    line-height: 25px;
+    font-size: 1.1rem;
+}
+.circle-icon{
+    border-radius: 50%;
+    border-style: solid;
+    border-color: $success;
+    color: $success;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    transition: all 0.5s;
+}
+.circle-icon:hover{
+    background-color: $success;
+    cursor: pointer;
+}
+hr{
+    margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top: 0; 
+}
+.preloader{
+    width: 100%;
+    height: 100vh;
+    z-index: 999999;
+    background-color: $success;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    opacity: 1;
+    .loader{
+        border: 3px solid transparent;
+        border-radius: 50%;
+        position: absolute;
+    }
+    .loader-circle1{
+        width: 75px;
+        height: 75px;
+        border-top: 3px solid $primary;
+        border-bottom: 3px solid $primary;
+        animation: load 2s linear infinite;
+    }
+    .loader-circle2{
+        width: 60px;
+        height: 60px;
+        border-left: 3px solid $secondary;
+        border-right: 3px solid $secondary;
+        position: relative;
+        top: 8px;
+        left: 8px;
+        animation: load2 2s linear infinite;
+    }
+    .loader-circle3{
+        width: 45px;
+        height: 45px;
+        border-left: 3px solid #800080;
+        border-right: 3px solid #800080;
+        position: relative;
+        top: -45px;
+        left: 15px;
+        animation: load 2s linear infinite;
+    }
+    @keyframes load {
+        from {transform: rotate(0deg) };
+        to {transform: rotate(360deg)}
+    }
+    @keyframes load2 {
+        from {transform: rotate(360deg) };
+        to {transform: rotate(0deg)}
+    }
+}
+
+
