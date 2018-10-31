@@ -6640,32 +6640,16 @@ header .nav-scroll {
         background-color: white;
         width: 86px;
         height: 86px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center; }
-    .sec1 .row .col-lg-6 .row .col-lg-6 i {
-      font-size: 2.8rem;
-      color: #f95d80;
-      position: absolute;
-      top: 17%;
-      transform: translate(-50%); }
+        border-radius: 50%; }
+      .sec1 .row .col-lg-6 .row .col-lg-6 .circle i {
+        font-size: 2.8rem;
+        color: #f95d80;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
     .sec1 .row .col-lg-6 .row .col-lg-6 .blue-line {
       color: #6A82FB; }
-  .sec1 .row .col-lg-6 .row .animate-col:hover .circle {
-    animation: rot 1s linear infinite; }
-
-@keyframes rot {
-  0% {
-    transform: rotate(0deg); }
-  25% {
-    transform: rotate(90deg); }
-  50% {
-    transform: rotate(180deg); }
-  75% {
-    transform: rotate(270deg); }
-  100% {
-    transform: rotate(360deg); } }
 
 /* Medium devices */
 @media all and (max-width: 991px) {
@@ -6842,7 +6826,6 @@ header .nav-scroll {
 .white-popup {
   position: relative;
   padding: 20px;
-  width: auto;
   max-width: 800px;
   margin: 20px auto;
   height: 550px; }
