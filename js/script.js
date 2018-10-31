@@ -174,7 +174,6 @@ $(document).ready(function(){
     });
 /***************************   Init Popup Plugin  ******************************/
     $('.video-link').magnificPopup({
-		disableOn: 700,
 		type: 'inline',
 		mainClass: 'mfp-fade',
 		removalDelay: 160,
